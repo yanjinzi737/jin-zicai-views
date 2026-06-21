@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+
+# Inbox: raw downloads excluded; README tracked
+references/inbox/*
+!references/inbox/README.md
