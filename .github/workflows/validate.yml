@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate corpus
+        run: python scripts/validate_corpus.py
+      - name: Validate claims
+        run: python scripts/validate_claims.py --strict
+      - name: Validate method rules
+        run: python scripts/validate_method_rules.py
+      - name: Validate consistency
+        run: python scripts/check_consistency.py
+      - name: Validate fund data
+        run: python scripts/build_fund_data.py
