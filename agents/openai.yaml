@@ -1,0 +1,4 @@
+interface:
+  display_name: "金梓才观点库"
+  short_description: "基于公开原始材料构建可溯源的金梓才观点与方法研究能力"
+  default_prompt: "使用 $jin-zicai-views 溯源分析金梓才的公开观点，并清楚标注来源与不确定性。"
