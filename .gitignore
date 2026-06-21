@@ -7,3 +7,6 @@ __pycache__/
 # Inbox: raw downloads excluded; README tracked
 references/inbox/*
 !references/inbox/README.md
+
+# Temp: working files, PDF renders, full text extractions
+tmp/
