@@ -29,12 +29,19 @@
 
 行业景气、个股空间、动态优化、景气拐点、盈利弹性、预期差、动态估值、行业切换、风险控制、错误复盘均未达到“稳定方法”证据标准。
 
+## 2026-06-21 进度更新：JZC-2025-ANNUAL-001 正文级核验完成
+
+- JZC-2025-ANNUAL-001 已完成正文级核验，状态从 `metadata_only` 升级为 `verified`。
+- 核验确认：唯一列示基金经理为金梓才（PDF第12页）；投资运作分析（PDF第14–15页，§4.4.1）；风险相关内容（PDF第15页，§4.5）。
+- 已写回索引（index.jsonl + index.csv）：fund_name、fund_code、reporting_period、manager_signed、relevant_excerpt、summary、topic_tags、local_file、content_checksum 均已更新。
+- 本地脚本已运行通过：Schema 校验、source_id 唯一性、引用完整性、去重、URL 离线格式、Markdown 链接、JSONL/CSV 一致性均为 PASS。
+- 其他 11 条来源仍未完成正文级核验（10 条 `metadata_only`，1 条 `pending`）。
+
 ## 阻塞与限制
 
 - 财通基金官网API成功返回官方PDF元数据和地址；随后外部访问审批额度耗尽，未继续下载PDF。
 - 未绕过任何登录、验证码、付费墙、反爬或访问限制。
-- Windows沙箱helper故障阻止本地Python测试执行；脚本已写入，但本轮未能形成可信的运行结果。
-- 因此本阶段尚未满足“至少12份正文级高质量资料”和完整测试验收，不应标记完成。
+- 本阶段尚未满足”至少12份正文级高质量资料”和完整测试验收，不应标记完成。
 
 ## 下一步
 
